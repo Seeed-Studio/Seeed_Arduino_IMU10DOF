@@ -75,6 +75,9 @@ THE SOFTWARE.
     #endif
     #if I2CDEV_IMPLEMENTATION == I2CDEV_ARDUINO_WIRE
         #include <Wire.h>
+        #ifndef BUFFER_LENGTH
+          #define BUFFER_LENGTH 32
+        #endif
     #endif
 #else
     #include "ArduinoWrapper.h"
